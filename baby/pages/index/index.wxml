@@ -1,0 +1,107 @@
+<!--pages/index/index.wxml-->
+<view class='app_body'>
+  <import src="../common/common" />
+  <view class='index_top'>
+      <view class='index_title'>
+        美糖的小星球
+      </view>
+      <view class='top_content'>
+        <view class='top_content_left'>
+        <!-- 头像 -->
+          <view class='user_img'>
+            <image mode='widthFix' class='userImage' src='{{userImage}}'></image>
+          </view>
+        </view>
+        <view class='top_content_right'>
+        <!-- 陪伴 -->
+          <view class='companion_time'>
+            我已经陪伴爸爸妈妈
+            <text class="timers">456</text>天
+          </view>
+          <!-- 列表 -->
+            <view class='top_nav_lists_box'>
+              <view class='top_nav_lists'>
+                <view class='top_nav_list'>
+                  <text class='top_nav_list_img1 iconfont icon-womanheart'></text>
+                  <text class='top_nav_list_txt'>100</text>
+                </view>
+                <view class='top_nav_list'>
+                  <text class='top_nav_list_img iconfont icon-hua'></text>
+                  <text class='top_nav_list_txt'>5</text>
+                </view>
+                <view class='top_nav_list'>
+                  <text class='top_nav_list_img iconfont icon-xin_'></text>
+                  <text class='top_nav_list_txt'>12</text>
+                </view>
+                <view class='top_nav_list'>
+                  <text class='top_nav_list_img iconfont icon-pinglun'></text>
+                  <text class='top_nav_list_txt'>20</text>
+                </view>
+              </view>
+            </view>
+        </view>
+      </view>
+  </view>
+  <view class='content'>
+    <view class='data_lists' wx:for = "{{data_list}}" wx:for-item = "data" wx:for-index="i" wx:key="{{i}}">
+      <!-- list top -->
+      <view class='data_list_top'>
+      <!-- 列表时间 -->
+        <view class='data_list_time'>
+          <view class='data_list_D'>{{data.day}}</view>
+          <view class='data_list_YM'>{{data.YM}}</view>
+        </view>
+        <!-- 标题 及 位置 -->
+        <view class='data_list_titleSite'>
+          <view class='data_list_title'>
+            <text>{{data.title}}</text>
+          </view>
+          <view class='data_list_site' wx:if = '{{data.site != ""}}'>
+            <text class='data_list_siteImg iconfont icon-dingwei'></text>
+            <text class='data_list_sitetxt'>{{data.site}}</text>
+          </view>
+        </view>
+      </view>
+      <!-- list img -->
+      <view class='data_list_Images' wx:if="{{data.Image_or_video == 1}}">
+        <view class='data_list_Imgs' wx:for="{{data.Image}}" wx:for-item = "dataImage" wx:for-index = "dataImageI"  wx:key="{{dataImageI}}">
+          <image mode='widthFix' class='data_list_Img' src='{{dataImage.data_list1_img}}'></image>
+        </view>
+      </view> 
+      <!-- list video -->
+      <view class='data_list_Videos'  bindtap='videoInfo' data-info = "{{data}}" wx:if="{{data.Image_or_video == 2}}">
+        <video wx:if="{{id == data.id}}" autoplay='true'   class='data_list_Video' src='{{data.Video}}'></video>
+        <view  wx:else>
+          <image class='data_list_Videos_img' mode='widthFix' src='http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_25.png'></image>
+        </view>
+      </view> 
+      <view class='data_list_comment'>
+        {{data.Text}}
+      </view>     
+      <view class='data_list_XPbox'>
+        <view class='data_list_XP'>
+          <text class='xin_img_iconfont iconfont icon-xin'></text>
+          <text class='data_list_yan_num'>654</text>
+          <text class='yan_img_iconfont iconfont icon-liuyan'></text>
+          <text class='data_list_yan_num'>5684</text>
+        </view>
+      </view>
+    </view>
+    
+    <view class='data_list_jiazai'>
+      <text>{{jiazai}}</text>
+    </view>
+  </view>
+
+  <view class='bottoms'></view>
+  <template is="footer1"/>
+  <!-- 用户是否授权 -->
+  <cover-view wx:if="{{userInfo}}" class='userInfo_box'>
+    <cover-view class='userInfo_content'>
+      <cover-view class='userInfo_txt'>
+        微信授权
+      </cover-view>
+      <button class='userInfo_btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">请授权</button>
+    </cover-view>
+  </cover-view>
+</view>

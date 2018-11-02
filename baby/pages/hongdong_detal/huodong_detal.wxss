@@ -1,0 +1,77 @@
+/* pages/hongdong_detal/huodong_detal.wxss */
+@import "../common/common.wxss";
+.app_body_top{
+  height: 140.22rpx;
+  background: #ff48a4;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app_body_top_title{
+  margin-top: 40rpx;
+}
+.content{
+  width: auto;
+  background: #f4f4f4;
+  padding-top: 0;
+}
+.app_body_top{
+  justify-content: space-between;
+}
+.content_image{
+  width: 100%;
+  height: 317.632rpx;
+  display:block;
+}
+.content_top{
+  width: 100%;
+  margin: 0 auto 18.115rpx;
+  background: #fff;
+  padding: 30.193rpx 0 24.154rpx;
+}
+.content_top_box{
+  width: 689.61rpx;
+  margin: 0 auto;
+}
+.content_title{
+  display: flex;
+  justify-content: space-between;
+}
+.content_title_left{
+  width: 477.053rpx;
+  height: 81.521rpx;
+  line-height: 40.8rpx;
+}
+.content_title_right{
+  width: 224.56rpx;
+  height: 81.521rpx;
+  line-height: 40.8rpx;
+}
+.content_title_txt1{
+  font-size: 30.193rpx;
+  color: #333;
+  display: block;
+}
+.content_title_txt2{
+  font-size: 24.154rpx;
+  color: #666;
+  display: block;
+}
+.content_title_right_txt{
+  font-size: 30.193rpx;
+  color: #ff9600;
+}
+.content_bottom{
+  width: 100%;
+  background: #fff;
+}
+.content_bottom_box{
+  width: 689.61rpx;
+  margin: 0 auto;
+}
+.icon-time{
+  font-size:33.077rpx;
+  color:#ff9600;
+  margin-right:6.038rpx;
+}

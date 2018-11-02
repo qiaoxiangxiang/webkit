@@ -1,0 +1,40 @@
+<!--pages/hongdong_detal/huodong_detal.wxml-->
+<!--pages/huodong/huodong.wxml-->
+<view class="app_body">
+  <import src="../common/common" />
+  <view class='app_body_top'>
+    <text bindtap="fanhui_SY" class='app_body_top_title app_body_top_fanhui'>{{fanhui}}</text>
+    <text class='app_body_top_title'>{{title}}</text>
+    <text class='app_body_top_title'></text>
+  </view>
+  <image class='content_image' src='http://cdkey.yaqoo.com.cn/webkit_cun_img/index/haoyou_02.jpg'></image>
+  <view class='content'>
+    <view class='content_top'>
+      <view class='content_top_box'>
+        <view class='content_title'>
+          <view class='content_title_left'>
+            <text class='content_title_txt1'>宝宝节让宝宝的生活更美好</text>
+            <text class='content_title_txt2'>2018-07-04——2018-10-04</text>
+          </view>
+          <view class='content_title_right'>
+            <text class='iconfont icon-time'></text>
+            <text class='content_title_right_txt'>距离结束10天</text>
+          </view>
+        </view>
+        <view class='content_title_txt'>
+
+        </view>
+      </view>
+    </view>
+    <view class='content_bottom'>
+      <view class='content_bottom_box'>
+
+      </view>
+    </view>
+  </view>
+  
+  
+  <view class='bottoms'></view>
+  <template is="footer1"/>
+</view>
+

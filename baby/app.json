@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/hongdong_detal/huodong_detal",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/detail/detail",
+    "pages/common/common",
+    "pages/baobao_quan/baobao_quan",
+    "pages/start/start",
+    "pages/huodong/huodong"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "rgba(0,0,0,0.3)",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#fff",
+    "navigationStyle": "custom"
+  }
+}

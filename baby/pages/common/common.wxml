@@ -1,0 +1,23 @@
+<!--pages/common/common.wxml-->
+<template name="footer1">
+  <cover-view class='bottom'>
+    <cover-image class='bottom_BJimg' src='http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_49.png'></cover-image>
+    <cover-view class='nav_list'  bindtap = "chengzhang">
+      <cover-view class='iconfont icon-xiangce'></cover-view>
+      <cover-view class='nav_list_txt'>成长相册</cover-view>
+    </cover-view>
+    <cover-view class='nav_list' bindtap = "baby_quan">
+      <cover-view class='iconfont icon-pengyouquan'></cover-view>
+      <cover-view class='nav_list_txt'>宝宝圈</cover-view>
+    </cover-view>
+    <cover-view class='nav_list'  bindtap = "tianjia"></cover-view>
+    <cover-view class='nav_list'  bindtap = "huodong">
+      <cover-view class='iconfont icon-huo'></cover-view>
+      <cover-view class='nav_list_txt'>活动</cover-view>
+    </cover-view>
+    <cover-view class='nav_list'  bindtap = "my_xinxi">
+      <cover-view class='iconfont icon-wode'></cover-view>
+      <cover-view class='nav_list_txt'>我的</cover-view>
+    </cover-view>
+  </cover-view>
+</template> 

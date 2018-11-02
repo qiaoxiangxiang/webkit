@@ -1,0 +1,128 @@
+/* pages/baobao_quan/baobao_quan.wxss */
+@import "../index/index.wxss";
+.app_body_top{
+  height: 140.22rpx;
+  background: #ff48a4;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app_body_top_title{
+  margin-top: 40rpx;
+}
+.data_lists_top{
+  border-top: 18.115rpx #f1f1f1 solid;
+}
+.bottoms{
+  background: #f4f4f4;
+  height: 189.613rpx;
+}
+.data_lists_top1{
+  border: none;
+}
+.data_lists{
+  box-shadow:0 0 0 #eaeaea;
+}
+.data_list_time{
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.data_list_sitetime{
+  margin-left: 30.19rpx; 
+}
+.data_list_comment{
+  padding: 0 0 18.11rpx;
+  border: none;
+}
+.data_list_XPbox{
+  padding:30.193rpx 0;
+  overflow: hidden;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+.data_list_XP {
+position:absolute;
+bottom:8px;
+right:0;
+padding:30.193rpx 0;
+}
+.pinglun{
+  margin-right: 13.12rpx;
+}
+.data_list_zan{
+  display:flex;
+  flex-wrap:no-wrap;
+  padding: 24.15rpx 0;
+}
+.data_list_zan_names{
+  font-size: 23.362rpx;
+  color: #333;
+  line-height: 44.309rpx;
+  margin-left: 4rpx;
+}
+.data_list_zan_names .data_list_zan_name{
+  display: inline-block;
+  color: #ff3f9a;
+}
+.data_list_zan_names .data_list_zan_name1{
+  display: inline-block;
+}
+.pinglun_content{
+  border-top:1px solid #e6e6e6;
+}
+.data_lists{
+  width: 689.61rpx;
+  margin: 0 auto;
+}
+.data_list_Imgs{
+  width:225.314rpx;
+  height:225.314rpx;
+}
+.data_list_titleSite {
+  width:538.31rpx;
+}
+.pinglun_lists .data_list_titleSite{
+  display: flex;
+  white-space: nowrap;
+  justify-content: space-between;
+  flex-direction: row;
+
+}
+.pinglun_lists .data_list_time {
+  width: 51.328rpx;
+  height: 51.328rpx;
+}
+.pinglun_content .pinglun_lists{
+  padding-top: 0;
+}
+.pinglun_content .pinglun_lists{
+  padding-top: 0;
+  border-radius:0;
+  box-shadow:0 0 0 #fff;
+
+}
+.pinglun_lists  .data_list_top{
+  height: 51.328rpx;
+  padding-top: 33.81rpx;
+  border-top: 1px solid #e6e6e6;
+}
+.pinglun_content .pinglun_lists:nth-of-type(1) .data_list_top{
+  border-top: none;
+}
+.pinglun_lists .data_list_titleSite{
+  width: 620.31rpx;
+  height: 100%;
+  padding: 0;
+}
+.pinglun_lists .data_list_title,.pinglun_lists  .data_list_title{
+  height: 100%;
+  padding: 0
+}
+.pinglun_txt{
+  font-size: 27.2727rpx;
+  line-height: 48.309rpx;
+  color: #333;
+  width: 653.188rpx;
+  padding-left: 66.425rpx;
+}

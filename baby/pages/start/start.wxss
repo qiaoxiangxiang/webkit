@@ -1,0 +1,29 @@
+/* pages/start/start.wxss */
+@import "../index/index.wxss";
+.content{
+  height: 634.057rpx;
+  background: #fafafa;
+}
+.button{
+  width: 320.048rpx;
+  height: 92.391rpx;
+  background: linear-gradient(to right, #fc96d5 ,#ff3f9a);
+  line-height: 92.391rpx;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 92.391rpx;
+  margin: 0 auto;
+  font-size: 33.212rpx;
+}
+.icon-shequneiicon-{
+  margin-right: 20rpx;
+  font-size: 43.212rpx;
+}
+.image_no{
+  width: 206.521rpx;
+  height: 216.183rpx;
+  display: block;
+  margin: 140.096rpx auto 42.27rpx;
+}

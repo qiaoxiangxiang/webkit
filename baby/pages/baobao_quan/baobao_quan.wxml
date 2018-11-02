@@ -1,0 +1,462 @@
+<!--pages/baobao_quan/baobao_quan.wxml-->
+<view class="app_body">
+  <import src="../common/common" />
+  <view class='app_body_top'>
+    <text class='app_body_top_title'>{{title}}</text>
+  </view>
+  <view class="data_lists_top data_lists_top1">
+    <view class='data_lists'>
+      <view class="data_list_top">
+        <view class="data_list_time">
+          <image mode='aspectFit' src='{{userImage}}'></image>
+        </view>
+        <view class="data_list_titleSite">
+          <view class="data_list_title">
+            <text>
+              美糖宝宝 8岁零4个月了
+            </text>
+          </view>
+          <view class="data_list_site">
+            <text class="data_list_siteImg iconfont icon-dingwei"></text>
+            <text class="data_list_sitetxt">
+              北京市
+            </text>
+            <text class="data_list_sitetime">
+              2018-7-20
+            </text>
+          </view>
+        </view>
+      </view>
+      <view class="data_list_comment">
+        慧慧是个敏感的小宝贝。从她刚学会走路起，只要我和她爸爸聊天时，说话大声点儿，就以为我们吵架了就会站在我们中间呜呜呜地哭起来。惹得我们哈哈大笑，每次都要解释半天，没和爸爸吵架。
+      </view>
+      <view class="data_list_Images">
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_04.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_06.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_08.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_13.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_14.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_15.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_19.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_20.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_21.png" style="height: 113px;"></image>
+        </view>
+      </view>
+
+      <view class="data_list_XPbox">
+        <view>
+          <text class="xin_img_iconfont iconfont icon-xin"></text>
+          <text class="data_list_yan_num">
+              654
+            </text>
+
+        </view>
+        <view class="data_list_XP">
+          <text class="yan_img_iconfont iconfont icon-liuyan"></text>
+          <text class="data_list_yan_num pinglun">
+              评论
+            </text>
+          <text class="xin_img_iconfont iconfont icon-fenxiang" style='font-size:30.608rpx'></text>
+          <text class="data_list_yan_num">
+              分享
+            </text>
+        </view>
+      </view>
+      <view class="data_list_zan">
+        <view class="xin_img_iconfont iconfont icon-xin_" style='line-height:48.309rpx'></view>
+        <view class='data_list_zan_names'>
+          <text class='data_list_zan_name'>小王子</text>、
+          <text class='data_list_zan_name'>亚瑟骑士</text>、
+          <text class='data_list_zan_name'>米勒的爱心城堡</text>、
+          <text class='data_list_zan_name'>张晓明</text>、
+          <text class='data_list_zan_name'>天天歌舞</text>、
+          <text class='data_list_zan_name'>天线宝宝</text>、
+          <text class='data_list_zan_name'>小米</text>、
+          <text class='data_list_zan_name'>沙漠鱼</text>
+          <text class='data_list_zan_name1'>等</text>
+          <text class='data_list_zan_name1'>80</text>
+          <text class='data_list_zan_name1'>人为宝宝点赞</text>
+        </view>
+      </view>
+    </view>
+    <view class='pinglun_content'>
+      <view class='pinglun_lists data_lists'>
+        <view class="data_list_top">
+          <view class="data_list_time">
+            <image mode='aspectFit' src='{{userImage}}'></image>
+          </view>
+          <view class="data_list_titleSite">
+            <view class="data_list_title">
+              <text>
+              美糖宝宝 8岁零4个月了
+            </text>
+            </view>
+            <view class="data_list_site">
+              <text class="data_list_siteImg iconfont icon-dingwei"></text>
+              <text class="data_list_sitetxt">
+              北京市
+            </text>
+              <text class="data_list_sitetime">
+              2018-7-20
+            </text>
+            </view>
+          </view>
+        </view>
+        <view class='pinglun_txt'>
+          评论里，有人说，带小孩子去旅行，是“花钱买罪受”
+          而且，孩子那么小，不管去哪都没印象，去了也白去
+          那都是错误的。
+        </view>
+      </view>
+      <view class='pinglun_lists data_lists'>
+        <view class="data_list_top">
+          <view class="data_list_time">
+            <image mode='aspectFit' src='{{userImage}}'></image>
+          </view>
+          <view class="data_list_titleSite">
+            <view class="data_list_title">
+              <text>
+              美糖宝宝 8岁零4个月了
+            </text>
+            </view>
+            <view class="data_list_site">
+              <text class="data_list_siteImg iconfont icon-dingwei"></text>
+              <text class="data_list_sitetxt">
+              北京市
+            </text>
+              <text class="data_list_sitetime">
+              2018-7-20
+            </text>
+            </view>
+          </view>
+        </view>
+        <view class='pinglun_txt'>
+          评论里，有人说，带小孩子去旅行，是“花钱买罪受”
+          而且，孩子那么小，不管去哪都没印象，去了也白去
+          那都是错误的。
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="data_lists_top">
+    <view class='data_lists'>
+      <view class="data_list_top">
+        <view class="data_list_time">
+          <image mode='aspectFit' src='{{userImage}}'></image>
+        </view>
+        <view class="data_list_titleSite">
+          <view class="data_list_title">
+            <text>
+              美糖宝宝 8岁零4个月了
+            </text>
+          </view>
+          <view class="data_list_site">
+            <text class="data_list_siteImg iconfont icon-dingwei"></text>
+            <text class="data_list_sitetxt">
+              北京市
+            </text>
+            <text class="data_list_sitetime">
+              2018-7-20
+            </text>
+          </view>
+        </view>
+      </view>
+      <view class="data_list_comment">
+        慧慧是个敏感的小宝贝。从她刚学会走路起，只要我和她爸爸聊天时，说话大声点儿，就以为我们吵架了就会站在我们中间呜呜呜地哭起来。惹得我们哈哈大笑，每次都要解释半天，没和爸爸吵架。
+      </view>
+      <view class="data_list_Images">
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_04.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_06.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_08.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_13.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_14.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_15.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_19.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_20.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_21.png" style="height: 113px;"></image>
+        </view>
+      </view>
+
+      <view class="data_list_XPbox">
+        <view>
+          <text class="xin_img_iconfont iconfont icon-xin"></text>
+          <text class="data_list_yan_num">
+              654
+            </text>
+
+        </view>
+        <view class="data_list_XP">
+          <text class="yan_img_iconfont iconfont icon-liuyan"></text>
+          <text class="data_list_yan_num pinglun">
+              评论
+            </text>
+          <text class="xin_img_iconfont iconfont icon-fenxiang" style='font-size:30.608rpx'></text>
+          <text class="data_list_yan_num">
+              分享
+            </text>
+        </view>
+      </view>
+      <view class="data_list_zan">
+        <view class="xin_img_iconfont iconfont icon-xin_" style='line-height:48.309rpx'></view>
+        <view class='data_list_zan_names'>
+          <text class='data_list_zan_name'>小王子</text>、
+          <text class='data_list_zan_name'>亚瑟骑士</text>、
+          <text class='data_list_zan_name'>米勒的爱心城堡</text>、
+          <text class='data_list_zan_name'>张晓明</text>、
+          <text class='data_list_zan_name'>天天歌舞</text>、
+          <text class='data_list_zan_name'>天线宝宝</text>、
+          <text class='data_list_zan_name'>小米</text>、
+          <text class='data_list_zan_name'>沙漠鱼</text>
+          <text class='data_list_zan_name1'>等</text>
+          <text class='data_list_zan_name1'>80</text>
+          <text class='data_list_zan_name1'>人为宝宝点赞</text>
+        </view>
+      </view>
+    </view>
+    <view class='pinglun_content'>
+      <view class='pinglun_lists data_lists'>
+        <view class="data_list_top">
+          <view class="data_list_time">
+            <image mode='aspectFit' src='{{userImage}}'></image>
+          </view>
+          <view class="data_list_titleSite">
+            <view class="data_list_title">
+              <text>
+              美糖宝宝 8岁零4个月了
+            </text>
+            </view>
+            <view class="data_list_site">
+              <text class="data_list_siteImg iconfont icon-dingwei"></text>
+              <text class="data_list_sitetxt">
+              北京市
+            </text>
+              <text class="data_list_sitetime">
+              2018-7-20
+            </text>
+            </view>
+          </view>
+        </view>
+        <view class='pinglun_txt'>
+          评论里，有人说，带小孩子去旅行，是“花钱买罪受”
+          而且，孩子那么小，不管去哪都没印象，去了也白去
+          那都是错误的。
+        </view>
+      </view>
+      <view class='pinglun_lists data_lists'>
+        <view class="data_list_top">
+          <view class="data_list_time">
+            <image mode='aspectFit' src='{{userImage}}'></image>
+          </view>
+          <view class="data_list_titleSite">
+            <view class="data_list_title">
+              <text>
+              美糖宝宝 8岁零4个月了
+            </text>
+            </view>
+            <view class="data_list_site">
+              <text class="data_list_siteImg iconfont icon-dingwei"></text>
+              <text class="data_list_sitetxt">
+              北京市
+            </text>
+              <text class="data_list_sitetime">
+              2018-7-20
+            </text>
+            </view>
+          </view>
+        </view>
+        <view class='pinglun_txt'>
+          评论里，有人说，带小孩子去旅行，是“花钱买罪受”
+          而且，孩子那么小，不管去哪都没印象，去了也白去
+          那都是错误的。
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="data_lists_top">
+    <view class='data_lists'>
+      <view class="data_list_top">
+        <view class="data_list_time">
+          <image mode='aspectFit' src='{{userImage}}'></image>
+        </view>
+        <view class="data_list_titleSite">
+          <view class="data_list_title">
+            <text>
+              美糖宝宝 8岁零4个月了
+            </text>
+          </view>
+          <view class="data_list_site">
+            <text class="data_list_siteImg iconfont icon-dingwei"></text>
+            <text class="data_list_sitetxt">
+              北京市
+            </text>
+            <text class="data_list_sitetime">
+              2018-7-20
+            </text>
+          </view>
+        </view>
+      </view>
+      <view class="data_list_comment">
+        慧慧是个敏感的小宝贝。从她刚学会走路起，只要我和她爸爸聊天时，说话大声点儿，就以为我们吵架了就会站在我们中间呜呜呜地哭起来。惹得我们哈哈大笑，每次都要解释半天，没和爸爸吵架。
+      </view>
+      <view class="data_list_Images">
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_04.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_06.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_08.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_13.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_14.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_15.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_19.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_20.png" style="height: 113px;"></image>
+        </view>
+        <view class="data_list_Imgs">
+          <image class="data_list_Img" mode="widthFix" src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/index_img_21.png" style="height: 113px;"></image>
+        </view>
+      </view>
+
+      <view class="data_list_XPbox">
+        <view>
+          <text class="xin_img_iconfont iconfont icon-xin"></text>
+          <text class="data_list_yan_num">
+              654
+            </text>
+
+        </view>
+        <view class="data_list_XP">
+          <text class="yan_img_iconfont iconfont icon-liuyan"></text>
+          <text class="data_list_yan_num pinglun">
+              评论
+            </text>
+          <text class="xin_img_iconfont iconfont icon-fenxiang" style='font-size:30.608rpx'></text>
+          <text class="data_list_yan_num">
+              分享
+            </text>
+        </view>
+      </view>
+      <view class="data_list_zan">
+        <view class="xin_img_iconfont iconfont icon-xin_" style='line-height:48.309rpx'></view>
+        <view class='data_list_zan_names'>
+          <text class='data_list_zan_name'>小王子</text>、
+          <text class='data_list_zan_name'>亚瑟骑士</text>、
+          <text class='data_list_zan_name'>米勒的爱心城堡</text>、
+          <text class='data_list_zan_name'>张晓明</text>、
+          <text class='data_list_zan_name'>天天歌舞</text>、
+          <text class='data_list_zan_name'>天线宝宝</text>、
+          <text class='data_list_zan_name'>小米</text>、
+          <text class='data_list_zan_name'>沙漠鱼</text>
+          <text class='data_list_zan_name1'>等</text>
+          <text class='data_list_zan_name1'>80</text>
+          <text class='data_list_zan_name1'>人为宝宝点赞</text>
+        </view>
+      </view>
+    </view>
+    <view class='pinglun_content'>
+      <view class='pinglun_lists data_lists'>
+        <view class="data_list_top">
+          <view class="data_list_time">
+            <image mode='aspectFit' src='{{userImage}}'></image>
+          </view>
+          <view class="data_list_titleSite">
+            <view class="data_list_title">
+              <text>
+              美糖宝宝 8岁零4个月了
+            </text>
+            </view>
+            <view class="data_list_site">
+              <text class="data_list_siteImg iconfont icon-dingwei"></text>
+              <text class="data_list_sitetxt">
+              北京市
+            </text>
+              <text class="data_list_sitetime">
+              2018-7-20
+            </text>
+            </view>
+          </view>
+        </view>
+        <view class='pinglun_txt'>
+          评论里，有人说，带小孩子去旅行，是“花钱买罪受”
+          而且，孩子那么小，不管去哪都没印象，去了也白去
+          那都是错误的。
+        </view>
+      </view>
+      <view class='pinglun_lists data_lists'>
+        <view class="data_list_top">
+          <view class="data_list_time">
+            <image mode='aspectFit' src='{{userImage}}'></image>
+          </view>
+          <view class="data_list_titleSite">
+            <view class="data_list_title">
+              <text>
+              美糖宝宝 8岁零4个月了
+            </text>
+            </view>
+            <view class="data_list_site">
+              <text class="data_list_siteImg iconfont icon-dingwei"></text>
+              <text class="data_list_sitetxt">
+              北京市
+            </text>
+              <text class="data_list_sitetime">
+              2018-7-20
+            </text>
+            </view>
+          </view>
+        </view>
+        <view class='pinglun_txt'>
+          评论里，有人说，带小孩子去旅行，是“花钱买罪受”
+          而且，孩子那么小，不管去哪都没印象，去了也白去
+          那都是错误的。
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='bottoms'></view>
+  <template is="footer1"/>
+</view>

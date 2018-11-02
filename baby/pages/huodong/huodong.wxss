@@ -1,0 +1,74 @@
+/* pages/huodong/huodong.wxss */
+@import "../common/common.wxss";
+.app_body_top{
+  height: 140.22rpx;
+  background: #ff48a4;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app_body_top_title{
+  margin-top: 40rpx;
+}
+.content{
+  width: 689.61rpx;
+  margin: 0 auto;
+  background: #fcfcfc;
+  padding-top: 36.231rpx;
+}
+.content_list{
+  width: 100%;
+  height: 417.874rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  margin-bottom: 30.193rpx;
+  overflow: hidden;
+}
+.content_list_img{
+  width: 100%;
+  height: 289.855rpx;
+  display: block;
+}
+.content_list_box{
+  padding: 0 28.985rpx;
+  width: 631.038rpx;
+  height: 128.019rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content_list_left{
+  width: 477.053rpx;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content_list_left .content_list_text1{
+  display: block;
+  height: 38.65rpx;
+  font-size: 30.193rpx;
+  color: #333;
+}
+.content_list_left .content_list_text2{
+  display: block;
+  height: 38.65rpx;
+  font-size: 24.154rpx;
+  color: #666;  
+}
+.content_list_right{
+  width: 148.550rpx;
+  height: 55.555rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 27.272rpx;
+  color: #fff;
+  background: #f6b10b;
+  border-radius: 55.555rpx;
+}
+.content_list_jieshu{
+  background: #d8d8d8;
+}

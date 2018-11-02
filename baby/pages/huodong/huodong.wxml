@@ -1,0 +1,49 @@
+<!--pages/huodong/huodong.wxml-->
+<view class="app_body">
+  <import src="../common/common" />
+  <view class='app_body_top'>
+    <text class='app_body_top_title'>{{title}}</text>
+  </view>
+  <view class='content'>
+    <view class='content_list'>
+      <image class='content_list_img' mode='widthFix' src='http://cdkey.yaqoo.com.cn/webkit_cun_img/index/huodong_img_03.png'></image>
+      <view class='content_list_box'>
+        <view class='content_list_left'>
+          <text class='content_list_text1'>宝宝节让宝宝的生活更美好</text>
+          <text class='content_list_text2'>2018-07-04——2018-10-04</text>
+        </view>
+        <view class='content_list_right'>
+          活动中
+        </view>
+      </view>
+    </view>
+    <view class='content_list'>
+      <image class='content_list_img' mode='widthFix' src='http://cdkey.yaqoo.com.cn/webkit_cun_img/index/huodong_img_06.png'></image>
+      <view class='content_list_box'>
+        <view class='content_list_left'>
+          <text class='content_list_text1'>宝宝节让宝宝的生活更美好</text>
+          <text class='content_list_text2'>2018-07-04——2018-10-04</text>
+        </view>
+        <view class='content_list_right'>
+          活动中
+        </view>
+      </view>
+    </view>
+    <view class='content_list'>
+      <image class='content_list_img' mode='widthFix' src='http://cdkey.yaqoo.com.cn/webkit_cun_img/index/huodong_img_08.png'></image>
+      <view class='content_list_box'>
+        <view class='content_list_left'>
+          <text class='content_list_text1'>宝宝节让宝宝的生活更美好</text>
+          <text class='content_list_text2'>2018-07-04——2018-10-04</text>
+        </view>
+        <view class='content_list_right content_list_jieshu'>
+          已结束
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  
+  <view class='bottoms'></view>
+  <template is="footer1"/>
+</view>

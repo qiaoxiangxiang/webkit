@@ -1,0 +1,55 @@
+<!--pages/start/start.wxml-->
+<view class='app_body'>
+  <import src="../common/common" />
+  <view class='index_top'>
+      <view class='index_title'>
+        美糖的小星球
+      </view>
+      <view class='top_content'>
+        <view class='top_content_left'>
+        <!-- 头像 -->
+          <view class='user_img'>
+            <image mode='widthFix' class='userImage' src='{{userImage}}'></image>
+          </view>
+        </view>
+        <view class='top_content_right'>
+        <!-- 陪伴 -->
+          <view class='companion_time'>
+            我已经陪伴爸爸妈妈
+            <text class="timers">456</text>天
+          </view>
+          <!-- 列表 -->
+            <view class='top_nav_lists_box'>
+              <view class='top_nav_lists'>
+                <view class='top_nav_list'>
+                  <text class='top_nav_list_img1 iconfont icon-womanheart'></text>
+                  <text class='top_nav_list_txt'>100</text>
+                </view>
+                <view class='top_nav_list'>
+                  <text class='top_nav_list_img iconfont icon-hua'></text>
+                  <text class='top_nav_list_txt'>5</text>
+                </view>
+                <view class='top_nav_list'>
+                  <text class='top_nav_list_img iconfont icon-xin_'></text>
+                  <text class='top_nav_list_txt'>12</text>
+                </view>
+                <view class='top_nav_list'>
+                  <text class='top_nav_list_img iconfont icon-pinglun'></text>
+                  <text class='top_nav_list_txt'>20</text>
+                </view>
+              </view>
+            </view>
+        </view>
+      </view>
+  </view>
+  <view class='content'>
+    <image class='image_no' src="http://cdkey.yaqoo.com.cn/webkit_cun_img/index/start_03.png"></image>
+    <view class='button'>
+      <text class='iconfont icon-shequneiicon-'></text>
+      <text>上传照片</text>
+    </view>
+  </view>
+  <view class='bottoms'></view>
+  <template is="footer1"/>
+</view>
+
