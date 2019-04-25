@@ -1,0 +1,149 @@
+<!-- 模板一 ： LOGO -->
+  <template name = "header_logo">
+    <view class='header_model1'>
+    <!-- logo 图 -->
+      <image class='logo' src='{{imgUrl}}/index/logo1.png' mode="widthFix"></image>
+    <!-- 搜索框 -->
+      <navigator  class='sousuo_kuang'
+        url="../course/listofcours/listofcours"
+        hover-class="navigator-hover">
+        <image class='gobuy_img' src='{{imgUrl}}/common/sousuo.png' mode="widthFix"></image>
+        <input class='header_input' type='text' placeholder='赵建新老师针灸新课上线！'></input>
+      </navigator>
+    <!-- 列表 -->
+      <navigator
+        url="../course/listofcours/listofcours"
+        hover-class="navigator-hover">
+        <image  class='liebiao' src='{{imgUrl}}/common/liebiao1.png' mode="widthFix"></image>
+      </navigator>
+    <!-- 购物车 -->
+    <navigator  class='gobuy'
+      url="../course/listofcours/listofcours"
+    hover-class="navigator-hover">
+      <image class='gobuy_img' src='{{imgUrl}}/common/gobuy1.png' mode="widthFix"></image>
+        <text class='gobuy_num'>20</text>
+    </navigator>
+      <!-- <view class='gobuy'>
+        
+      </view> -->
+    </view>
+  </template>
+<!--模板二 ：  头部返回 -->
+  <template name = "header_fanhui1">
+    <view class='header_model2'>
+    <!-- 放回上一页 -->
+    <navigator open-type="navigateBack">
+      <image class='head_back' src='{{imgUrl}}/common/fanhui2.png' mode="widthFix"></image>
+    </navigator>
+    <!-- 头部标题 -->
+      <view class='head_title'>
+        赵建新老师针灸新课上线！
+      </view>
+    <!-- 列表 -->
+    <navigator
+      url="../../course/listofcours/listofcours"
+      hover-class="navigator-hover">
+      <image  class='liebiao' src='{{imgUrl}}/common/liebiao2.png' mode="widthFix"></image>
+    </navigator>
+    <!-- 购物车 -->
+    <navigator class='gobuy'
+      url="../../course/listofcours/listofcours"
+      hover-class="navigator-hover">
+        <image class='gobuy_img' src='{{imgUrl}}/common/gobuy2.png' mode="widthFix"></image>
+        <text class='gobuy_num'>20</text>
+      </navigator>
+    </view>
+  </template>
+<!--模板三 ：  头部返回 没有列表和购物车-->
+  <template name = "header_fanhui2">
+    <view class='header_model3'>
+    <!-- 放回上一页 -->
+    <navigator open-type="navigateBack">
+      <image class='head_back' src='{{imgUrl}}/common/fanhui2.png' mode="widthFix"></image>
+    </navigator>
+    <!-- 头部标题 -->
+      <view class='head_title'>
+        赵建新老师针灸新课上线！
+      </view>
+    </view>
+  </template>
+<!-- 底部公共（一级 首页） -->
+  <template name = "footer_yiji">
+    <view class='footer'>
+      <navigator class='footer_l'
+        url="../course/listofcours/listofcours"
+        hover-class="navigator-hover"
+      >
+        <image class='footer_img' src='{{imgUrl}}/common/shouye2.png' mode='widthFix'></image>
+        <view class='footer_txt'>首 页</view>
+      </navigator>
+      <navigator class='footer_l'
+        url="../course/listofcours/listofcours"
+        hover-class="navigator-hover"
+      >
+        <image class='footer_img' src='{{imgUrl}}/common/zhibo2.png' mode='widthFix'></image>
+        <view class='footer_txt'>直 播</view>
+      </navigator>
+      <navigator class='footer_l'
+        url="../course/listofcours/listofcours"
+        hover-class="navigator-hover"
+      >
+        <image class='footer_img' src='{{imgUrl}}/common/buy2.png' mode='widthFix'></image>
+        <view class='footer_txt'>已 购</view>
+      </navigator>
+      <navigator class='footer_l'
+        url="../course/listofcours/listofcours"
+        hover-class="navigator-hover"
+      >
+        <image class='footer_img' src='{{imgUrl}}/common/faxian2.png' mode='widthFix'></image>
+        <view class='footer_txt'>发 现</view>
+      </navigator>
+      <navigator class='footer_l'
+        url="../course/listofcours/listofcours"
+        hover-class="navigator-hover"
+      >
+        <image class='footer_img' src='{{imgUrl}}/common/my2.png' mode='widthFix'></image>
+        <view class='footer_txt'>我 的</view>
+      </navigator>
+    </view>
+  </template>
+<!-- 底部公共（二级） -->
+  <template name = "footer_erji">
+    <view class='footer'>
+      <navigator class='footer_l'
+        url="../../course/listofcours/listofcours"
+        hover-class="navigator-hover"
+      >
+        <image class='footer_img' src='{{imgUrl}}/common/shouye2.png' mode='widthFix'></image>
+        <view class='footer_txt'>首 页</view>
+      </navigator>
+      <navigator class='footer_l'
+        url="../../course/listofcours/listofcours"
+        hover-class="navigator-hover"
+      >
+        <image class='footer_img' src='{{imgUrl}}/common/zhibo2.png' mode='widthFix'></image>
+        <view class='footer_txt'>直 播</view>
+      </navigator>
+      <navigator class='footer_l'
+        url="../../course/listofcours/listofcours"
+        hover-class="navigator-hover"
+      >
+        <image class='footer_img' src='{{imgUrl}}/common/buy2.png' mode='widthFix'></image>
+        <view class='footer_txt'>已 购</view>
+      </navigator>
+      <navigator class='footer_l'
+        url="../../course/listofcours/listofcours"
+        hover-class="navigator-hover"
+      >
+        <image class='footer_img' src='{{imgUrl}}/common/faxian2.png' mode='widthFix'></image>
+        <view class='footer_txt'>发 现</view>
+      </navigator>
+      <navigator class='footer_l'
+        url="../../course/listofcours/listofcours"
+        hover-class="navigator-hover"
+      >
+        <image class='footer_img' src='{{imgUrl}}/common/my2.png' mode='widthFix'></image>
+        <view class='footer_txt'>我 的</view>
+      </navigator>
+    </view>
+  </template>

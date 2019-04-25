@@ -1,0 +1,11 @@
+<view class='content'>
+  <import src = "../../common/common.wxml" />
+  <template is="header_fanhui1" data = '{{imgUrl}}'/>
+  <view class='center'>
+
+  </view>
+  <view>
+    <template is="footer_erji" data = '{{imgUrl}}'/>
+  </view>
+</view>
+

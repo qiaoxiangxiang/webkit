@@ -1,11 +1,11 @@
-// pages/deployFunctions/deployFunctions.js
+var common = require('../../../static/static.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    imgUrl: common.objUrl('img'),
   },
 
   /**

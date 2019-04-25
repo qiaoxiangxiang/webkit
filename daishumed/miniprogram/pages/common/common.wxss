@@ -1,0 +1,122 @@
+/* 公用样式 */
+page{
+  width: 100%;height: 100%;
+}
+.content{
+  width: 100%;
+  position: relative;
+}
+.navigator-hover {
+  background: rgba(0,0,0,0);
+  opacity: 1;
+}
+/* 公共模板样式 */
+.header_model1,.header_model2,.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 18.11rpx;
+
+}
+.header_model1,.header_model2,.header_model3{
+  width: 689.535rpx;
+  padding: 0 30.24rpx;
+  position: relative;
+  z-index: 10;
+}
+.header_model3{
+  position:relative;
+  display: flex;
+  align-items: center;
+}
+
+.header_model1 .logo{
+  width: 60.386rpx;
+}
+
+.header_model1 .liebiao,.header_model2 .liebiao{
+  width: 43.549rpx;
+}
+.header_model1 .gobuy,.header_model2 .gobuy{
+  position: relative;
+}
+.header_model1 .gobuy .gobuy_img,.header_model2 .gobuy .gobuy_img{
+  width: 52.017rpx;
+}
+.header_model1 .gobuy .gobuy_num,.header_model2 .gobuy .gobuy_num{
+  font-size: 19.355rpx;
+  color: #fff;
+  background: #ffb400;
+  padding: 3rpx 5rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: -10rpx;
+}
+.header_model2 .head_title,.header_model1 .sousuo_kuang{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 447.58rpx;
+  height: 60.496rpx;
+}
+
+.header_model1 .sousuo_kuang{
+  background: #fff;
+  border-radius: 60.496rpx;
+}
+.header_model1 .sousuo_kuang .gobuy_img{
+  width: 28.985rpx;
+  margin-right: 6rpx;
+}
+.header_model1 .sousuo_kuang .header_input{
+  width: 356.280rpx;
+  background: #fff;
+  border: none;
+  outline: none;
+  font-size: 27.173rpx;
+  color: #aaa;
+  margin-left: 6rpx;
+}
+
+.header_model2 .head_back,.header_model3 .head_back{
+  width: 24.15rpx;
+}
+.header_model2 .head_title{
+  font-size: 34.32rpx;
+  color: #333;
+}
+.header_model3 .head_back{
+  position: absolute;
+  left: 26.077rpx;
+}
+.header_model3 .head_title{
+  text-align:center;
+  width:100%;
+  font-size: 34.32rpx;
+  color: #333;
+}
+/* 底部 */
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  height: 107.663rpx;
+  border-top: 0.603rpx solid #dedede;
+}
+.footer .footer_l{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.footer .footer_l .footer_img{
+  width: 42.27rpx;
+}
+.footer .footer_l .footer_txt{
+  font-size: 21.169rpx;
+  color: #878c92;
+  padding-top: 8.677rpx;
+}
