@@ -90,5 +90,40 @@
     /* 文字内容只做一行显示 */
     white-space: nowrap;
 }
+/* 课程css */
+.shop_ke{
+  width: 689.535rpx;
+  margin: 0 auto;
+}
+.shop_titleBox{
+  width: 100%;
+  height: 102.824rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+.shop_gengduo{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 27.218rpx;
+  color: #aaa;
+}
 
+.shop_title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 33.266rpx;
+  color: #333;
+}
+.shop_title_xian{
+  width: 6.04rpx;
+  height: 32.062rpx;
+  border-radius: 6.04rpx;
+  background: #008cdc;
+}
 
+.shop_gengduo_img{
+  width: 10.282rpx;
+}

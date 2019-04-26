@@ -17,30 +17,9 @@ Page({
       { imgUrl: '/index/kaquan.png',    txt: '激活卡券', srcUrl: '', },
       { imgUrl: '/index/fenlei.png',    txt: '全部分类', srcUrl: '', },
     ],
-    YiLeft:0,
+    YiLeft:0,//文字滚动
+    leibie: ["执业医师", "执业药师", "中医师承", "确有专长", "知识付费", "乡村全科","知识传播普及产品"],
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -55,16 +34,7 @@ Page({
         console.log(self.data.banner_list)
       }
     );
-
-
-
-
   },
-
-  
-
-  
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -73,20 +43,21 @@ Page({
     var num = 0;
     var query = wx.createSelectorQuery();
     query.select('.toutiao_text').boundingClientRect()
-    setInterval(function(){
-      num=num--;
-      self.setData({
-        YiLeft: num,
-      })
-      query.exec(function (res) {
-        //console.log(res);  
-        console.log(res[0].width);
-        if (num == 0-res[0].width) {
-          num = 0;
-        }
-      })
+    // setInterval(function(){
+    //   num--;
+    //   self.setData({
+    //     YiLeft: num,
+    //   })
+    //   query.exec(function (res) {
+    //     console.log(res);  
+    //     console.log(res[0].width);
+    //     console.log(parseInt(0-res[0].width / 16) +"----"+ self.data.YiLeft);
+    //     if (num == parseInt(0-(res[0].width/16))) {
+    //       num = 0;
+    //     }
+    //   })
       
-    },1)
+    // },30)
   },
 
   /**

@@ -16,6 +16,7 @@
         </swiper-item>
       </block>
     </swiper>
+    <!-- 宫格 和 文字滚动 -->
     <view class='gongge_box'>
       <view class='gongge'>
         <navigator wx:for="{{gongge_list}}"  wx:key = "{{index}}" class='gongge_list {{index>3?"gongge_list_bottom":""}}' url='{{item.srcUrl}}'>
@@ -27,26 +28,34 @@
         <image src='{{imgUrl}}/index/toutiao.png' class='toutiao_img' mode='widthFix'></image>
         <view class='toutiao_txt'>
           <view class='toutiao_text' style='position:relative;left:{{YiLeft}}px'>
-            <view >
+            <view>
               {{banner_list.message.message_title}}
             </view>
 
-            <view >
+            <view style="margin-left: 100rpx">
               {{banner_list.message.message_title}}
             </view>
-
-            
-
-
-
-
-
-
-
           </view>
         </view>
         <view class='toutiao_time'>{{banner_list.message.inputtime}}</view>
       </view>
+    </view>
+<!-- 课程 -->
+    <view class='shop_ke'>
+    <!-- 标题 -->
+      <view class='shop_titleBox'>
+        <view class='shop_title'>
+          <view class='shop_title_xian'></view>
+           执医医师
+        </view>
+        <view class='shop_gengduo'>
+          更多
+          <image class='shop_gengduo_img' src='{{imgUrl}}/index/gengduo.png' mode='widthFix'></image>
+        </view>
+      </view>
+      <!-- 不同类下的班型 -->
+      <view></view>
+      <!-- kecheng -->
     </view>
   </view>
   <template is="footer_yiji" data = '{{imgUrl}}'/>
