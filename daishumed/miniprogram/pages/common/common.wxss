@@ -2,6 +2,9 @@
 page{
   width: 100%;height: 100%;
 }
+image{
+  display: block;
+}
 .content{
   width: 100%;
   position: relative;
@@ -20,7 +23,8 @@ page{
 }
 .header_model1,.header_model2,.header_model3{
   width: 689.535rpx;
-  padding: 0 30.24rpx;
+  padding: 18.11rpx 30.24rpx 0;
+  margin: 0;
   position: relative;
   z-index: 10;
 }
@@ -79,7 +83,7 @@ page{
   margin-left: 6rpx;
 }
 
-.header_model2 .head_back,.header_model3 .head_back{
+.header_model1 .head_back,.header_model2 .head_back,.header_model3 .head_back{
   width: 24.15rpx;
 }
 .header_model2 .head_title{
@@ -119,4 +123,151 @@ page{
   font-size: 21.169rpx;
   color: #878c92;
   padding-top: 8.677rpx;
+}
+/* 购物车 */
+.buyshopping_box{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 12;
+}
+.buyshopping_contentS{
+  width: 100%;
+  min-height: 430.721rpx;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 125.566rpx;
+}
+.buyshopping_tops{
+  width: 100%;
+  height: 101.614rpx;
+  background: #f4f4f4;
+}
+.buyshopping_content,.buyshopping_top{
+  width: 702.836rpx;
+  margin: 0 auto;
+}
+.buyshopping_top{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buyshopping_txt{
+  display: flex;
+  align-items: center;
+}
+.buyshopping_title{
+  font-size: 36.291rpx;
+  color: #387fff;
+}
+.buyshopping_timg{
+  font-size: 24.198rpx;
+  color: #999;
+  margin-left: 33.266rpx;
+}
+.buyshopping_cha{
+  width: 27.823rpx;
+  padding:10rpx 0 10rpx 10rpx;
+}
+.shop_titleBox{
+  width: 100%;
+  height: 56.824rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding-top: 26rpx;
+}
+.shop_title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 33.266rpx;
+  color: #333;
+}
+.shop_title_xian{
+  width: 6.04rpx;
+  height: 38.062rpx;
+  border-radius: 6.04rpx;
+  background: #008cdc;
+  margin-right: 12rpx;
+  margin-top: 5rpx;
+}
+.buyshopping_xuanBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.buyshopping_xuan{
+  width: 46%;
+  min-height: 66.533rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 0.6rpx solid #999;
+  padding: 0 1%;
+  margin-top: 31.452rpx;
+}
+.buyshopping_isxuan{
+  background: #e8f1fc;
+  color: #227ae1;
+  border-color: #227ae1;
+}
+.buyshopping_xuanTxt,.buyshopping_xuanPrice{
+  font-size: 24.198rpx;
+  color: #999;
+}
+.buyshopping_isxuan .buyshopping_xuanTxt{
+  color: #227ae1;
+}
+.buyshopping_xuanPrice{
+  color: #e83121;
+}
+.buyshopping_bottom{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 95.566rpx;
+  box-shadow:0rpx -6rpx 25rpx #eee;
+
+}
+.buyshopping_goubuyPrice,.buyshopping_goubuyche,.buyshopping_goubuybuy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34%;
+  height: 100%;
+  font-size: 27.218rpx;
+  color: #fff;
+}
+.buyshopping_goubuyImgs{
+  width: 29.032rpx;
+  margin-right: 12rpx;
+}
+.buyshopping_priceTxt{
+  font-size: 29.032rpx;
+  color: #333;
+}
+.buyshopping_priceNum{
+  font-size: 34.291rpx;
+  color: #e83121;
+}
+.buyshopping_goubuyche{
+  background: #387fff;
+}
+.buyshopping_goubuybuy{
+  background: #ff7e00;
+}
+.two_year{
+  font-size: 27.218rpx;
+  color: #666;
+  margin-top: 34.152rpx;
 }

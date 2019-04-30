@@ -28,28 +28,60 @@
       </view> -->
     </view>
   </template>
+  <!--模板头部白色：  头部返回 -->
+  <template name = "header_fanhuibai">
+    <view class='header_model1'>
+    <!-- logo 图 -->
+    <navigator open-type="navigateBack">
+      <image class='head_back' src='{{imgUrl}}/common/fanhui1.png' mode="widthFix"></image>
+    </navigator>
+    <!-- 搜索框 -->
+      <navigator  class='sousuo_kuang'
+        url="../course/listofcours/listofcours"
+        hover-class="navigator-hover">
+        <image class='gobuy_img' src='{{imgUrl}}/common/sousuo.png' mode="widthFix"></image>
+        <input class='header_input' type='text' placeholder='赵建新老师针灸新课上线！'></input>
+      </navigator>
+    <!-- 列表 -->
+      <navigator
+        url="../course/listofcours/listofcours"
+        hover-class="navigator-hover">
+        <image  class='liebiao' src='{{imgUrl}}/common/liebiao1.png' mode="widthFix"></image>
+      </navigator>
+    <!-- 购物车 -->
+    <navigator  class='gobuy'
+      url="../course/listofcours/listofcours"
+    hover-class="navigator-hover">
+      <image class='gobuy_img' src='{{imgUrl}}/common/gobuy1.png' mode="widthFix"></image>
+        <text class='gobuy_num'>20</text>
+    </navigator>
+      <!-- <view class='gobuy'>
+        
+      </view> -->
+    </view>
+  </template>
 <!--模板二 ：  头部返回 -->
   <template name = "header_fanhui1">
     <view class='header_model2'>
     <!-- 放回上一页 -->
     <navigator open-type="navigateBack">
-      <image class='head_back' src='{{imgUrl}}/common/fanhui2.png' mode="widthFix"></image>
+      <image class='head_back' src='{{istoubuFan.imgUrl}}/common/fanhui2.png' mode="widthFix"></image>
     </navigator>
     <!-- 头部标题 -->
       <view class='head_title'>
-        赵建新老师针灸新课上线！
+        {{istoubuFan.txt}}
       </view>
     <!-- 列表 -->
     <navigator
       url="../../course/listofcours/listofcours"
       hover-class="navigator-hover">
-      <image  class='liebiao' src='{{imgUrl}}/common/liebiao2.png' mode="widthFix"></image>
+      <image  class='liebiao' src='{{istoubuFan.imgUrl}}/common/liebiao2.png' mode="widthFix"></image>
     </navigator>
     <!-- 购物车 -->
     <navigator class='gobuy'
       url="../../course/listofcours/listofcours"
       hover-class="navigator-hover">
-        <image class='gobuy_img' src='{{imgUrl}}/common/gobuy2.png' mode="widthFix"></image>
+        <image class='gobuy_img' src='{{istoubuFan.imgUrl}}/common/gobuy2.png' mode="widthFix"></image>
         <text class='gobuy_num'>20</text>
       </navigator>
     </view>
@@ -71,7 +103,7 @@
   <template name = "footer_yiji">
     <view class='footer'>
       <navigator class='footer_l'
-        url="../course/listofcours/listofcours"
+        url="../index/index"
         hover-class="navigator-hover"
       >
         <image class='footer_img' src='{{imgUrl}}/common/shouye2.png' mode='widthFix'></image>
@@ -106,12 +138,13 @@
         <view class='footer_txt'>我 的</view>
       </navigator>
     </view>
+    <view style='height: 129.663rpx;'></view>
   </template>
 <!-- 底部公共（二级） -->
   <template name = "footer_erji">
     <view class='footer'>
       <navigator class='footer_l'
-        url="../../course/listofcours/listofcours"
+        url="../../index/index"
         hover-class="navigator-hover"
       >
         <image class='footer_img' src='{{imgUrl}}/common/shouye2.png' mode='widthFix'></image>
@@ -146,4 +179,71 @@
         <view class='footer_txt'>我 的</view>
       </navigator>
     </view>
+    <view style='height: 129.663rpx;'></view>
   </template>
+  <!-- 购物车 -->
+    <template name = "buyShopping">
+      <view class='buyshopping_box'>
+        <view class='buyshopping_contentS'>
+          <view class='buyshopping_tops'>
+            <view class='buyshopping_top'>
+              <view class='buyshopping_txt'>
+                <view class='buyshopping_title'>{{shopList.course_type_name}}</view>
+                <view class='buyshopping_timg'>有效期：{{shopList.down_time}}</view>
+              </view>
+              <image bindtap='shopping_cha' class='buyshopping_cha' src='{{shopList.imgUrl}}/common/cha.png' mode='widthFix'></image>
+            </view>
+          </view>
+          <view class='buyshopping_content'>
+            <view class='buyshopping_center'>
+              <!-- 选择方向 -->
+              <view class='shop_titleBox'>
+                <view class='shop_title'>
+                  <view class='shop_title_xian'></view>
+                  请选择方向
+                </view>
+              </view>
+              <!-- 课程 -->
+              <view class='buyshopping_xuanBox'>
+                <view bindtap='shop_huan' class='buyshopping_xuan {{item.isshow?"buyshopping_isxuan":""}}' 
+                  wx:for="{{shopList.spec}}" wx:key="{{index}}" data-indexs = "{{index}}">
+                  <view class='buyshopping_xuanTxt'>
+                   {{item.direction_name}} 
+                  </view>
+                  <view class='buyshopping_xuanPrice'>
+                    (￥{{item.spec[0].discount_price?item.spec[0].discount_price|Int:item.spec[0].price|Int}})
+                  </view>
+                </view>
+              </view>
+            </view>
+            <!-- 是否两年期 -->
+            <view class='two_year' wx:if='{{shopList.spec[0].spec.length == 2}}'>
+              <checkbox bindtap='twoYear' class='two_yearKuang'></checkbox> 两年期课程保障
+            </view>
+          </view>
+          
+          <view class='buyshopping_bottom'>
+            <view class='buyshopping_goubuyPrice'> 
+              <view class='buyshopping_priceTxt'>金额:</view>
+              <view class='buyshopping_priceNum' wx:for="{{shopList.spec}}" wx:key="{{index}}" wx:if="{{item.isshow}}">
+              <!-- 先判断是否是两年 
+                  1、否 取spec[0]内的值 在判断有无优惠； 
+                  2、是两年 判断是否选中两年
+                    2-1、选中 取spec[1]内的值 在判断是否有优惠  
+                    2-2、没选中 取spec[0]内的值 在判断是否有优惠
+                 |Int 取整
+              -->
+                ￥{{shopList.spec[0].spec.length != 2?(item.spec[0].discount_price?item.spec[0].discount_price|Int:item.spec[0].price|Int):shopList.twoYear?(item.spec[1].discount_price?item.spec[1].discount_price|Int:item.spec[1].price|Int):(item.spec[0].discount_price?item.spec[0].discount_price|Int:item.spec[0].price|Int)}}
+              </view>
+            </view>
+            <view bindtap='shopping_gobuy' data-list = "{{shopList}}" class='buyshopping_goubuyche'>
+              <image class='buyshopping_goubuyImgs' src='{{shopList.imgUrl}}/common/gobuy1.png' mode='widthFix'></image>
+              加入购物车
+            </view>
+            <view bindtap='shopping_buy' data-list = "{{shopList}}"  class='buyshopping_goubuybuy'>
+              立即购买
+            </view>
+          </view>
+        </view>
+      </view>
+    </template>

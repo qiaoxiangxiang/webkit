@@ -9,8 +9,8 @@ function objUrl(type){
 function userName() {
   // 获取用户信息
   wx.getSetting({
-    success: res => {
-      if (res.authSetting['scope.userInfo']) {
+    success: ueser => {
+      if (ueser.authSetting['scope.userInfo']) {
         // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
         wx.getUserInfo({
           success: res => {
@@ -33,8 +33,19 @@ function userName() {
                   //      
                   //     }
                   // })
+                  // yaqooPost("/Wxoauth/wechat_login", { "code": res.code},
+                  //   function(res){
+                  //     console.log(1111111)
+                  //     console.log(res)
+                  //   }
+                  // )
                   SetToken(res.code);
+
+
+                  
+                  
                   console.log('登录成功' + res.code)
+                  console.log(res)
                 } else {
                   console.log('登录失败！' + res.errMsg)
                 }
@@ -47,7 +58,7 @@ function userName() {
     }
   })
 }
-
+userName();
 // 保存token到本地
 function SetToken(token) {
   wx.setStorageSync('Token', token);
@@ -63,15 +74,22 @@ function yaqooPost(url, parameter,succes) {
   wx.request({
     url: php_Url + url,
     data: parameter,
+    method: 'POST',
     header: {
       Authorization: getToken,
+      'Content-type':"application/x-www-form-urlencoded"
     },
+    
     success: succes,
     fail: err => {
       console.log(err);
     },
   })
 };
+//获取邻边界的距离
+function scroll_juli(type,parsem){
+  wx.createSelectorQuery().select(type).boundingClientRect(parsem).exec();
+}
 
 
 // 上传图片
@@ -123,6 +141,11 @@ function doUpload() {
     }
   })
 };
+// 获取数据
+function eventdata(event){
+  return event.currentTarget.dataset;
+}
+
 
 // 
 module.exports = {
@@ -132,4 +155,6 @@ module.exports = {
   getToken: getToken,   //获取 token
   doUpload: doUpload,   //上传图片
   objUrl: objUrl,       //所有相关的路径
+  eventdata: eventdata, //获取事件中带过来的数据
+  scroll_juli: scroll_juli,//获取某一元素距离
 }

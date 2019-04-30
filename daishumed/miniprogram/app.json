@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/course/listofcours/listofcours",
+    "pages/index/index",
     "pages/common/common"
   ],
   "window": {

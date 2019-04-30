@@ -1,1 +1,124 @@
 @import "../../common/common.wxss";
+.course_topImg{
+  width: 100%;
+  margin-top: -78.606rpx;
+}
+.listofcourse_title{
+  background: #f5f5f5;
+  border-bottom: 3.629rpx solid #f5f5f5;
+}
+.listofcourse_liebiao{
+  background: #fff;
+  width: 100%;
+  min-height: 142.140rpx;
+  padding-bottom: 30.242rpx;
+}
+.listofcourse_content,.listofcourse_topTxt,.listofcourse_liebiaoBox{
+  width: 689.535rpx;
+  margin: 0 auto;
+}
+.listofcourse_topTxt{
+  display: flex;
+  align-items: center;
+  color: #59af47;
+  font-size: 24.198rpx;
+  height: 59.275rpx;
+}
+.listofcourse_titleImg{
+  width: 25.403rpx;
+}
+.listofcourse_liebiaoBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.listofcourse_listTitle{
+  width: 189.923rpx;
+  height: 39.920rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.6rpx solid #a6a6a6;
+  border-radius: 39.920rpx;
+  font-size: 25.403rpx;
+  color: #a6a6a6;
+  margin-top: 30.242rpx;
+}
+.listofcourse_listTitle_active{
+  color: #3b82fe;
+  border-color: #3b82fe;
+}
+/* 课程列表 */
+.listofcourse_ke{
+  width: 100%;
+  height: 200.807rpx;
+  background: #fff;
+  box-shadow: 0rpx 0rpx 40rpx #f3f3f3;
+  border-radius: 20rpx;
+  margin-bottom: 18.148rpx; 
+  padding-top: 20.568rpx;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.listofcourse_ke0{
+  margin-top: 18.148rpx;
+}
+.listofcourse_keImg{
+  width: 281.860rpx;
+  margin-left: 12.097rpx; 
+}
+.listofcourse_kecontent{
+  width: 381.056rpx;
+  margin-left: 15.726rpx;
+}
+.listofcourse_banName{
+  font-size: 26.032rpx;
+  font-weight: 600;
+  color: #333;
+}
+.listofcourse_keName,.listofcourse_ketime{
+  font-size: 21.169rpx;
+  color: #999;
+  margin-top: 9.677rpx;
+}
+.listofcourse_kePrice{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 9.677rpx;
+}
+.listofcourse_Prices{
+  font-size: 24.194rpx;
+  color: #e83121;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.listofcourse_Price{
+  font-size: 30.661rpx;
+}
+.listofcourse_OrigePrice{
+  font-size: 24.194rpx;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 12rpx;
+}
+.listofcourse_gobuy{
+  width: 54.436rpx;
+  position: absolute;
+  bottom: 13.911rpx;
+  right: 13.911rpx;
+}
+.listofcourse_Yibuy{
+  width: 64.114rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.header_model2{
+  position: fixed;
+  top: 0;
+}

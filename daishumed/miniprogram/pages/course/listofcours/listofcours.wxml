@@ -1,11 +1,81 @@
-<view class='content'>
-  <import src = "../../common/common.wxml" />
-  <template is="header_fanhui1" data = '{{imgUrl}}'/>
-  <view class='center'>
+<scroll-view
+    scroll-y
+    style="height: {{height}}rpx;"
+    bindscroll="scroll"
+  >
+  <view class='content'>
+    <import src = "../../common/common.wxml" />
+    <template  wx:if = "{{!istoubu}}" is="header_fanhuibai" data = '{{imgUrl}}'/>
+    <template  wx:if = "{{istoubu}}" is="header_fanhui1" data = '{{istoubuFan}}'/>
 
+    <view class='center'>
+      <image class='course_topImg' src='{{imgUrl}}/listofcourse/leibiaoImg.png' mode='widthFix'></image>
+      <view>
+        <view class='listofcourse_title'>
+          <view class='listofcourse_topTxt'>
+            <image class='listofcourse_titleImg' src='{{imgUrl}}/listofcourse/gengxin.png' mode='widthFix'></image>
+            【笔试】真题讲解班目前已更新654门课
+          </view>
+          <view class='listofcourse_liebiao'>
+            <view class='listofcourse_liebiaoBox'>
+              <view class='listofcourse_listTitle'>
+                执业医师  8
+              </view>
+              <view class='listofcourse_listTitle'>
+                确有专长  2
+              </view>
+              <view class='listofcourse_listTitle'>
+                袋鼠私塾  66
+              </view>
+              <view class='listofcourse_listTitle'>
+                试听课程  88
+              </view>
+              <view class='listofcourse_listTitle'>
+                精彩图书  102
+              </view>
+              <view class='listofcourse_listTitle'>
+                精彩题库  0
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='listofcourse_content'>
+            <view>
+              <view class='shop_titleBox'>
+                <view class='shop_title'>
+                  <view class='shop_title_xian'></view>
+                  执业医师
+                </view>
+              </view>
+              <view class="listofcourse_ke {{indexs == 0?'listofcourse_ke0':''}}" wx:for = "{{dataList}}" wx:for-index = "indexs"  wx:for-item = "items" wx:key = "{{indexs}}">
+                <image class='listofcourse_keImg' src='{{items.course_thumb}}' mode='widthFix'></image>
+                <view class='listofcourse_kecontent'>
+                  <view class='listofcourse_banName'>
+                    {{items.course_type_name}}
+                  </view>
+                  <view class='listofcourse_keName'>
+                    可选科目:{{items.direction_name}}
+                  </view>
+                  <view class='listofcourse_ketime'>
+                    {{items.class_hour}}小时 有效期：{{items.down_time}}
+                  </view>
+                  <view class='listofcourse_kePrice'>
+                    <view class='listofcourse_Prices'>￥<view class='listofcourse_Price'>{{items.d_course_price?items.d_course_price|Int:items.course_price|Int}}</view></view>
+                    <view class='listofcourse_OrigePrice' wx:if = "{{items.d_course_price}}">￥{{items.d_course_price?items.course_price|Int:""}}</view>
+                    <image bindtap='shopBuy' data-item = "{{items}}" class='listofcourse_gobuy' src='{{imgUrl}}/common/gobuy4.png' mode='widthFix'></image>
+                    <image class='listofcourse_Yibuy' src='{{imgUrl}}/listofcourse/yigou.png' mode='widthFix'></image>
+                  </view>
+                  
+                </view>
+              </view>
+            </view>
+        </view>
+      </view>
+      
+    </view>
+    <view>
+      <template is="footer_erji" data = '{{imgUrl}}'/>
+      <template is="buyShopping" data = '{{shopList}}' wx:if="{{isGoBuy}}"/>
+    </view>
   </view>
-  <view>
-    <template is="footer_erji" data = '{{imgUrl}}'/>
-  </view>
-</view>
-
+</scroll-view>

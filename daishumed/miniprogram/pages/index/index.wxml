@@ -9,7 +9,7 @@
       circular="true"
     >
       <block wx:for="{{banner_list.banner}}" wx:key = "{{index}}">
-        <swiper-item>
+        <swiper-item wx:if = "{{item.img}}">
           <navigator url='{{item.link}}'>
             <image src="{{item.img}}" class="slide-image" mode='widthFix'/>
           </navigator>
@@ -41,23 +41,46 @@
       </view>
     </view>
 <!-- 课程 -->
-    <view class='shop_ke'>
+    <view class='shop_ke' wx:for="{{shopKe_list}}" wx:for-index = "indexs" wx:for-item = "items"  wx:key="{{index}}" wx:if = "{{indexs == 0  || indexs == 3  || indexs == 4}}">
     <!-- 标题 -->
       <view class='shop_titleBox'>
         <view class='shop_title'>
           <view class='shop_title_xian'></view>
-           执医医师
+           {{leibie[indexs]}}
         </view>
         <view class='shop_gengduo'>
           更多
           <image class='shop_gengduo_img' src='{{imgUrl}}/index/gengduo.png' mode='widthFix'></image>
         </view>
       </view>
+      <view class='shop_Xtitle'>
+        权威出版单位出品，名师荟萃
+      </view>
       <!-- 不同类下的班型 -->
-      <view></view>
       <!-- kecheng -->
+      <view class='ShopKecheng_box'>
+        <view class='ShopKecheng' wx:for = "{{items}}" wx:for-index = "i" wx:for-item = "item" wx:key = "{{i}}">
+          <image class='ShopKeImg' src='{{item.course_thumb}}' mode='widthFix'></image>
+          <view class='shopKe_content'>
+            <view class='shopKeName'>{{item.course_type_name?item.course_type_name:item.course_name}}</view>
+            <view class='shopKeTime'>
+              <view class='shopKe_xinTime'>{{item.class_hour}}小时</view>
+              <view class='shopKe_time'>有效期：{{item.down_time}}</view>
+            </view>
+            <view class='shopKe_price'>
+              <view class='shopKePrice'>
+                <view class='shopKe_youPrice'>￥ {{item.d_course_price?item.d_course_price|Int:item.course_price|Int}}</view>
+                <view class='shopKe_origePrice' wx:if = "{{item.d_course_price}}" >￥{{item.d_course_price?item.course_price|int:""}}</view>
+              </view>
+              <image bindtap='shopBuy' data-item = "{{item}}" class='shopBuyImg' src='{{imgUrl}}/common/gobuy4.png' mode='widthFix'></image>
+            </view>
+          </view>
+        </view>
+      </view>
     </view>
   </view>
   <template is="footer_yiji" data = '{{imgUrl}}'/>
+  <template is="buyShopping" data = '{{shopList}}' wx:if="{{isGoBuy}}"/>
+
 </view>
 
