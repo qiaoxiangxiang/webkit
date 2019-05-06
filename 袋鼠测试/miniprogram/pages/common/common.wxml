@@ -301,7 +301,7 @@
     </template>
     <!-- 课程列表 -->
   <template name="listofcourse_list">
-    <view bindtap='list_Detail' class="listofcourse_ke {{indexs == 0?'listofcourse_ke0':''}}" wx:for = "{{dataList}}" wx:for-index = "indexs"  wx:for-item = "items" wx:key = "{{indexs}}" data-item = "{{items}}" data-flag = "{{flag}}">
+    <view class="listofcourse_ke {{indexs == 0?'listofcourse_ke0':''}}" wx:for = "{{dataList}}" wx:for-index = "indexs"  wx:for-item = "items" wx:key = "{{indexs}}">
       <image class='listofcourse_keImg' src='{{items.course_thumb}}' mode='widthFix'></image>
       <view class='listofcourse_kecontent'>
         <view class='listofcourse_banName'>
@@ -329,23 +329,3 @@
       </view>
     </view>
   </template>
-  <!-- 试听 -->
-<template  name="listofcourse_shiting">
-  <view class='listofcourse_Box' wx:for = "{{shitingArray}}" wx:key = "{{index}}">
-    <view class='listofcourse_topImg' bindtap='playVideo' data-index = "{{index}}">
-      <image wx:if="{{!videoArray[index]}}" src='{{item.video.coverurl}}' class='listofcourse_videoImg' mode='widthFix'></image>
-      <image wx:if="{{!videoArray[index]}}" src='{{imgUrl}}/listofcourse/bofang.png' class='listofcourse_bofangImg' mode='widthFix'></image>
-      <video  wx:if="{{videoArray[index]}}" autoplay='{{videoArray[index]?true:false}}' class='videoBox'  src='{{item.video.encryption_m3u8240}}' ></video>
-    </view>
-    
-    <view class='listofcourse_videoTxts'>
-      <view class='listofcourse_videoTxt'>
-        <view class='listofcourse_videoTitle1'>{{item.video.video_name}}</view>
-        <view class='listofcourse_videoTitle2'>{{item.course.course_type_name}}</view>
-      </view>
-      <view class='listofcourse_videoGobuy'>
-        去买课
-      </view>
-    </view>
-  </view>
-</template>

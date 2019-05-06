@@ -46,13 +46,6 @@ Page({
       }
     });
   },
-  // 列表点击跳转
-  listClick: function(){
-    var url = "../listofcoursList/listofcoursList?flag=1"
-    wx.navigateTo({
-      url: url,
-    })
-  },
 // 滚动条位置
   scroll(e) {
     var self = this;
@@ -108,7 +101,42 @@ Page({
           })
         }
       });
+
+
     };
+
+
+    
+    // common.scroll_juli(".listofcourse_topTxt", function (res) {
+    //   if (e.detail.scrollTop > num) {
+    //     if (res.top <= 0) {
+    //       self.setData({
+    //         istoubu: true,
+    //         istoubuFan: {
+    //           "imgUrl": imgUrl,
+    //           "txt": "全部",
+    //         },
+    //       })
+    //     }
+    //   } else {
+    //     if (res.top <= 0 && res.bottom >= 0) {
+    //       self.setData({
+    //         istoubu: true,
+    //         istoubuFan: {
+    //           "imgUrl": imgUrl,
+    //           "txt": "全部",
+    //         },
+    //       })
+    //     }
+    //   }
+    // });
+
+    
+    console.log(self.data.scrollTop);
+    console.log(11111111)
+    console.log(e.detail.scrollTop);
+    console.log(e.detail.scrollTop > self.data.scrollTop);
+
     setTimeout(function () {
       self.setData({
         scrollTop: e.detail.scrollTop
@@ -118,17 +146,10 @@ Page({
     
   },
 
+  
+
 
   // *********************************************************************************
-  // 课程跳转详情页
-  list_Detail:function(event){
-    var item = common.eventdata(event).item;
-    var flag = common.eventdata(event).flag;
-    var url = "../listdetail/listdetail?courseType=" + item.course_type + "&flag=" + flag + "&courseId=" + (item.course_id ? item.course_id : "")
-    wx.navigateTo({
-      url: url,
-    })
-  },
   // 购买课程
   shopBuy: function (event) {
     var datas = common.eventdata(event).item;
@@ -153,7 +174,6 @@ Page({
         console.log(self.data.shopList)
       },
     )
-    return false;
   },
   shopping_cha() {
     this.setData({

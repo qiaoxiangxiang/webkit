@@ -1,0 +1,17 @@
+@import "../../common/common.wxss";
+.header_model2  .head_title{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 435.492rpx;
+  font-size: 27.823rpx;
+  color: #333;
+}
+.header_model2 .gobuy .gobuy_num{
+  padding: 10rpx;
+  right: 0rpx;
+  background: #ff6c00;
+}
+.videoImg{
+  width: 100%;
+}

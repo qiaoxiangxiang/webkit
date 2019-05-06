@@ -19,10 +19,6 @@ image{
   width:689.535rpx;
   margin:0 auto;
 }
-video{
-  width: 0;
-  height: 225px;
-}
 
 /* 课程列表 */
 .listofcourse_zeng,.listofcourse_quan{
@@ -452,7 +448,4 @@ video{
   left: 50%;
   margin-top: -44.154rpx;
   margin-left: -44.154rpx;
-}
-.videoBox{
-  width: 100%;
 }

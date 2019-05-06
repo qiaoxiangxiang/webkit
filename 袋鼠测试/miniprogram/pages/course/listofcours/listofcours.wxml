@@ -18,7 +18,7 @@
           </view>
           <view class='listofcourse_liebiao'>
             <view class='listofcourse_liebiaoBox'>
-              <view class='listofcourse_listTitle' bindtap='listClick'>
+              <view class='listofcourse_listTitle'>
                 执业医师  8
               </view>
               <view class='listofcourse_listTitle'>

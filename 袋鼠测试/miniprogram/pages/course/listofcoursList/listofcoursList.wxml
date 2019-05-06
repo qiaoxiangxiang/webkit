@@ -1,0 +1,82 @@
+<scroll-view
+    scroll-y
+    style="height: {{height}}rpx;"
+    bindscroll="scroll"
+  >
+  <view class='content'>
+    <import src = "../../common/common.wxml" />
+    <view>
+      <template  wx:if = "{{!istoubu}}" is="header_fanhuibai" data = '{{imgUrl}}'/>
+      <template  wx:else = "{{istoubu}}" is="header_fanhui4" data = '{{istoubuFan}}'/>
+    </view>
+    <video src='https://1253453563.vod2.myqcloud.com/e23f8a6cvodtransgzp1253453563/e34ae9345285890784274298313/drm/v.f240.m3u8'></video>
+
+    <view class='center'>
+      <image class='course_topImg' src='{{imgUrl}}/listofcourse/leibiaoImg.png' mode='widthFix'></image>
+      <view>
+        <view class='listofcourse_title'>
+          <view class='listofcourse_topTxt'>
+            <image class='listofcourse_titleImg' src='{{imgUrl}}/listofcourse/gengxin.png' mode='widthFix'></image>
+            【笔试】真题讲解班目前已更新654门课
+          </view>
+          <view class='listofcourse_liebiao'>
+            <view class='listofcourse_liebiaoBox'>
+              <view bindtap='kecheng' class='listofcourse_listTitle {{qiehuan == 0?"listofcourse_listTitleActive":""}}'>
+                课程
+                <view class='{{qiehuan == 0?"listofcourse_listTitleXian":""}}'></view>
+              </view>
+              <view  bindtap='shiting' class='listofcourse_listTitle {{qiehuan == 1?"listofcourse_listTitleActive":""}}'>
+                试听
+                <view class='{{qiehuan == 1?"listofcourse_listTitleXian":""}}'></view>
+              </view>
+              <view  bindtap='zixun' class='listofcourse_listTitle {{qiehuan == 2?"listofcourse_listTitleActive":""}}'>
+                咨询
+                <view class='{{qiehuan == 2?"listofcourse_listTitleXian":""}}'></view>
+              </view>
+              <view  bindtap='shizi' class='listofcourse_listTitle {{qiehuan == 3?"listofcourse_listTitleActive":""}}'>
+                师资
+                <view class='{{qiehuan == 3?"listofcourse_listTitleXian":""}}'></view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='listofcourse_content' wx:if="{{qiehuan == 0}}">
+          <template is="listofcourse_list" data = '{{dataList,imgUrl}}'/>
+        </view>
+        <view class='listofcourse_content'  wx:if="{{qiehuan == 1}}">
+          <!-- 试听 -->
+          <view class='listofcourse_Box' wx:for = "{{shitingArray}}" wx:key = "{{index}}">
+            <view class='listofcourse_topImg'>
+              <image src='{{item.video.coverurl}}' class='listofcourse_videoImg' mode='widthFix'></image>
+              <image src='{{imgUrl}}/listofcourse/bofang.png' class='listofcourse_bofangImg' mode='widthFix'></image>
+              <!-- <video src='{{item.video.encryption_m3u8240}}'></video> -->
+            </view>
+            
+            <view class='listofcourse_videoTxts'>
+              <view class='listofcourse_videoTxt'>
+                <view class='listofcourse_videoTitle1'>{{item.video.video_name}}</view>
+                <view class='listofcourse_videoTitle2'>{{item.course.course_type_name}}</view>
+              </view>
+              <view class='listofcourse_videoGobuy'>
+                去买课
+              </view>
+            </view>
+          </view>
+
+        </view>
+        <view class='listofcourse_content'  wx:if="{{qiehuan == 2}}">
+          咨询
+        </view>
+        <view class='listofcourse_content'  wx:if="{{qiehuan == 3}}">
+          师资
+        </view>
+      </view>
+      
+    </view>
+    <view>
+      <template is="footer_erji" data = '{{imgUrl}}'/>
+      <template is="listofcourse_top" data = '{{imgUrl}}' wx:if="{{isLiebiao}}" />
+      <template is="buyShopping" data = '{{shopList}}' wx:if="{{isGoBuy}}"/>
+    </view>
+  </view>
+</scroll-view>

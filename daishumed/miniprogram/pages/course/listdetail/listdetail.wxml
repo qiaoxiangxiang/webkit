@@ -1,0 +1,48 @@
+<scroll-view
+    scroll-y
+    style="height: {{height}}rpx;"
+    bindscroll="scroll"
+  >
+  <view class='content'>
+    <import src = "../../common/common.wxml" />      
+    <view class='header_model2'>
+      <!-- 放回上一页 -->
+      <navigator open-type="navigateBack">
+        <image class='head_back' src='{{imgUrl}}/common/fanhui2.png' mode="widthFix"></image>
+      </navigator>
+      <!-- 头部标题 -->
+        <view class='head_title'>
+          <view>商品</view>
+          <view>详情</view>
+          <view>目录</view>
+          <view>评价</view>
+          <view>问答</view>
+        </view>
+      <!-- 分享 -->
+      <navigator
+        bindtap='listTopLiebiao'
+        hover-class="navigator-hover">
+        <image  class='liebiao' src='{{imgUrl}}/listofcourse/fenxiang.png' mode="widthFix"></image>
+      </navigator>
+      <!-- 列表 -->
+      <navigator class='gobuy'
+        url="../../course/listofcours/listofcours"
+        hover-class="navigator-hover">
+          <image class='gobuy_img' src='{{imgUrl}}/listofcourse/liebiao.png' mode="widthFix"></image>
+          <text class='gobuy_num'></text>
+      </navigator>
+    </view>
+    <view class='center'>
+      <view>
+        <image src='{{course.course_thumb}}' mode='widthFix' class='videoImg'></image>
+        <view wx:if="{{videoPlay.length}}" class=''>
+          <image src="" mode='widthFix' class='playAnniu'></image>
+        </view>
+        <video wx:if="{{videoPlay.length}}" class='videoPlay' src="{{videoPlay[0].video_url}}" ></video>
+      </view>
+    </view>
+    <view>
+      <template is="buyShopping" data = '{{shopList}}' wx:if="{{isGoBuy}}"/>
+    </view>
+  </view>
+</scroll-view>

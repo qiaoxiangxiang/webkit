@@ -6,12 +6,15 @@ Page({
    */
   data: {
     imgUrl: common.objUrl('img'),
-    dataList:[],
+    dataList: [],
     shopList: "",//加入购物车  立即购买  列表
     isGoBuy: false, // 是否加入购物车 默认false
     istoubu: false,
-    istoubuFan:"",//第二个头部传参\
+    istoubuFan: "",//第二个头部传参\
     scrollTop: 0,
+    qiehuan: 0,//课程 0 试听 1 咨询 2 师资 3 切换；
+    isLiebiao: false,//下拉列表显示隐藏
+    shitingArray: "",//试听课程
   },
 
   /**
@@ -20,18 +23,36 @@ Page({
   onLoad: function (options) {
     // 1、执业医师 2、执业药师 3、中医师承 4、确有专长 5、知识付费 6、乡村全科 7、知识传播普及产品
     var self = this;
-    
-    // 1、执业医师
-    common.yaqooPost("/Course/index",{'list_type':'1'},function(res){
+
+    // 初始化数据
+    // 课程
+    common.yaqooPost("/Course/index", { 'list_type': '1' }, function (res) {
       self.setData({
         dataList: res.data.data,
       })
       console.log(self.data.dataList)
     });
-    // 4、确有专长
-    
-    // 5、知识付费
-    
+    // 试听
+    common.yaqooPost("/Course/audition", { }, function (res) {
+      var list = res.data.data;
+      var listArray = [];
+      for(var i in list){
+        if (list[i].course.list_type == 1){
+          for(var j in list[i].video_list){
+            var listobj = {
+              course: list[i].course,
+              video: list[i].video_list[j],
+            }
+            listArray.push(listobj);
+          }
+        }
+      }
+      console.log(listArray)
+      self.setData({
+        shitingArray: listArray
+      })
+      
+    });
     //获取手机可视区域的高度
     wx.getSystemInfo({
       success: function (res) {
@@ -39,21 +60,14 @@ Page({
         let clientWidth = res.windowWidth;
         let ratio = clientWidth / 750;
         let height = clientHeight / ratio;
-        
+
         self.setData({
           height: height
         });
       }
     });
   },
-  // 列表点击跳转
-  listClick: function(){
-    var url = "../listofcoursList/listofcoursList?flag=1"
-    wx.navigateTo({
-      url: url,
-    })
-  },
-// 滚动条位置
+  // 滚动条位置
   scroll(e) {
     var self = this;
     // console.log(e.detail.scrollTop);
@@ -77,16 +91,16 @@ Page({
       // 执医
       common.scroll_juli(".listofcourse_content", function (res) {
         if (res.top <= 0) {
-            self.setData({
-              istoubu: true,
-              istoubuFan: {
-                "imgUrl": imgUrl,
-                "txt": "执业医师",
-              },
-            })
-          }
+          self.setData({
+            istoubu: true,
+            istoubuFan: {
+              "imgUrl": imgUrl,
+              "txt": "执业医师",
+            },
+          })
+        }
       });
-    }else{
+    } else {
       // 向上滚动
       // 执医
       common.scroll_juli(".listofcourse_content", function (res) {
@@ -108,6 +122,8 @@ Page({
           })
         }
       });
+
+
     };
     setTimeout(function () {
       self.setData({
@@ -115,20 +131,43 @@ Page({
       })
       num = e.detail.scrollTop;
     }, 0)
+
+  },
+  // 导航四个按钮
+  kecheng: function(){
+    this.setData({
+      qiehuan: 0,
+    })
+  },
+  shiting: function () {
+    this.setData({
+      qiehuan: 1,
+    })
+  },
+  zixun: function () {
+    this.setData({
+      qiehuan: 2,
+    })
+  },
+  shizi: function () {
+    this.setData({
+      qiehuan: 3,
+    })
+  },
+  listTopLiebiao:function(){
+    if(this.data.isLiebiao){
+      this.setData({
+        isLiebiao: false,
+      })
+    }else{
+      this.setData({
+        isLiebiao: true,
+      })
+    }
     
   },
 
-
   // *********************************************************************************
-  // 课程跳转详情页
-  list_Detail:function(event){
-    var item = common.eventdata(event).item;
-    var flag = common.eventdata(event).flag;
-    var url = "../listdetail/listdetail?courseType=" + item.course_type + "&flag=" + flag + "&courseId=" + (item.course_id ? item.course_id : "")
-    wx.navigateTo({
-      url: url,
-    })
-  },
   // 购买课程
   shopBuy: function (event) {
     var datas = common.eventdata(event).item;
@@ -153,7 +192,6 @@ Page({
         console.log(self.data.shopList)
       },
     )
-    return false;
   },
   shopping_cha() {
     this.setData({
@@ -200,7 +238,7 @@ Page({
   },
 
 
-// ******************************************************
+  // ******************************************************
 
 
 

@@ -1,0 +1,173 @@
+@import "../common/common.wxss";
+.header_model1{
+  position: absolute;
+  top: 0;
+}
+.slide-image{
+  width: 100%;
+}
+.gongge_box{
+  width: 689.535rpx;
+  margin: -55.646rpx auto 0;
+  background: #fff;
+  box-shadow: 0rpx 15rpx 25rpx #eee;
+  border-radius: 12.077rpx;
+  position: relative;
+  z-index: 10;
+}
+.gongge{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.gongge .gongge_list{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+  margin-top: 28.427rpx;
+}
+.gongge .gongge_list_bottom{
+  margin: 24.154rpx 0 20.568rpx;
+}
+.gongge .gongge_list .gongge_img{
+  width: 82.659rpx;
+}
+.gongge .gongge_list .gongge_txt{
+  font-size: 21.774rpx;
+  color: #444;
+  margin-top: 10.869rpx;
+}
+.roll_txt{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  border-top: 0.6rpx solid #eee;
+  height: 73.8rpx;
+}
+.roll_txt .toutiao_img{
+  width: 120.992rpx;
+}
+.roll_txt .toutiao_txt{
+  width: 428.658rpx;
+  overflow: hidden;
+}
+.roll_txt .toutiao_time{
+  font-size: 24.198rpx;
+  color: #999;
+}
+.roll_txt .toutiao_text{
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 24.198rpx;
+  color: #444;
+  width: 4000%;
+}
+
+
+
+
+
+
+.announcement {
+    color: #a0a0a0;
+    background: #fff0e3;
+    border-radius: 6rpx;
+    line-height: 66rpx;
+    height: 66rpx;
+}
+.announcement-context {
+    width: 580rpx;
+    /* 偏移出文本框的内容隐藏掉 */
+    overflow: hidden;
+}
+.announcement-text {
+    width: 570rpx;
+    /* 文字内容只做一行显示 */
+    white-space: nowrap;
+}
+/* 课程css */
+.shop_ke{
+  width: 689.535rpx;
+  margin: 0 auto;
+}
+
+.shop_gengduo{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 27.218rpx;
+  color: #aaa;
+}
+
+
+
+.shop_gengduo_img{
+  width: 14.282rpx;
+  margin-left: 6rpx;
+}
+.shop_Xtitle{
+  font-size: 22.984rpx;
+  color: #888;
+}
+/* 课程 */
+.ShopKecheng_box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ShopKecheng{
+  width: 325.409rpx;
+  margin-top: 27.218rpx;
+  box-shadow: 0rpx 10rpx 25rpx #ddd;
+  border-radius: 12rpx;
+}
+.ShopKeImg{
+  width: 100%;
+}
+.shopKe_content{
+  width: 295.328rpx;
+  margin: 0 auto;
+}
+.shopKeName{
+  font-size: 24.218rpx;
+  color: #333;
+  font-weight: bold;
+  margin: 16.148rpx 0 12.099rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.shopKeTime,.shopKe_price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12.099rpx;
+}
+.shopKePrice{
+  display:flex;
+  align-items:center;
+}
+.shopKe_xinTime,.shopKe_time{
+  font-size: 21.169rpx;
+  color: #999;
+}
+.shopKe_youPrice{
+  font-size: 27.218rpx;
+  color: #e83121;
+  font-weight: bold;
+}
+.shopKe_origePrice{
+  font-size: 16.935rpx;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 10.086rpx;
+}
+.shopBuyImg{
+  width: 54.436rpx;
+}

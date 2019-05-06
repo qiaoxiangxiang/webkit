@@ -1,0 +1,29 @@
+@import "../../common/common.wxss";
+@import "../listofcours/listofcours.wxss";
+.listofcourse_title {
+  border: none;
+}
+.listofcourse_liebiao{
+  min-height: 90.727rpx;
+  padding-bottom: 0;
+}
+.listofcourse_listTitle{
+  width: 25%;
+  border: none;
+  font-size: 30.242rpx;
+  color: #333;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 66.533rpx;
+}
+.listofcourse_listTitleXian{
+  width: 99.195rpx;
+  height: 8.467rpx;
+  border-radius: 8.467rpx;
+  background: #377ffe;
+}
+.listofcourse_listTitleActive{
+  color: #377ffe;
+}
+
+
